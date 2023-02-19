@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const year = prompt("Enter your year of Birthday");
+        let ageMessage = "";
+
+        if (year === null) {
+            alert("Шкода, що Ви не захотіли ввести свій рік народження");
+        }
+        else {
+            let age = 2023 - parseInt(year);
+            ageMessage = `Тобі ${age} років`;
+
+        }
+        const city = prompt("Enter city of residence");
+
+        if (city === null) {
+            alert("Шкода, що Ви не захотіли ввести своє місто");
+        }
+
+        const sport = prompt("Enter your favorite sport");
+        let sportMessage = "";
+
+        if (sport === null) {
+            alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту");
+        }
+        else {
+            sportMessage = `Твій улюблений вид спорту ${sport}`;
+        }
+
+        let residence = "";
+
+        switch (city) {
+            case "Київ":
+                residence = "Ти живеш у столиці України";
+                break;
+
+            case "Вашингтон":
+                residence = "Ти живеш у столиці США";
+                break;
+
+            case "Лондон":
+                residence = "Ти живеш у столиці Англії";
+                break;
+
+            case null:
+                break;
+
+            default:
+                residence = "ти живеш у місті " + city;
+
+        }
+
+        let champion = "Круто! Хочеш стати ";
+
+        switch (sport) {
+            case "Бокс":
+                champion += "Кличко?";
+                break;
+
+            case "Біг":
+                champion += "Болт?";
+                break;
+
+            case "Футбол":
+                champion += "Шевченко";
+                break;
+
+            default:
+                champion = "";
+
+        }
+
+
+        alert(`${ageMessage} ${residence} ${sportMessage} ${champion}`);
+
+
+
+    </script>
+</body>
+
+</html>
